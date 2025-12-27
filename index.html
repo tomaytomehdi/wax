@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعي الشخصي</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease;
+        }
+        
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .success {
+            background: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            font-size: 1.3em;
+            margin: 20px 0;
+            animation: bounce 2s infinite;
+        }
+        
+        .links {
+            margin-top: 30px;
+        }
+        
+        a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: 0.3s;
+            border-bottom: 2px solid transparent;
+        }
+        
+        a:hover {
+            border-bottom: 2px solid #FFD700;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 مرحباً!</h1>
+        <p>تم إنشاء الموقع بنجاح على GitHub Pages</p>
+        
+        <div class="success">✅ الموقع يعمل الآن!</div>
+        
+        <p>يمكنك تعديل هذا الملف وإضافة صفحات أخرى كما تريد</p>
+        
+        <div class="links">
+            <a href="https://github.com/tomaytomehdi" target="_blank">حسابي على GitHub</a>
+            |
+            <a href="mailto:email@example.com">اتصل بي</a>
+            |
+            <a href="about.html">عن الموقع</a>
+        </div>
+        
+        <p style="margin-top: 40px; font-size: 0.9em; opacity: 0.8;">
+            تم النشر في: <span id="date"></span>
+        </p>
+    </div>
+
+    <script>
+        // إظهار التاريخ الحالي
+        const now = new Date();
+        const options = { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        };
+        document.getElementById('date').textContent = now.toLocaleDateString('ar-EG', options);
+        
+        // رسالة ترحيب في الكونسول
+        console.log('🎯 موقعك يعمل بنجاح!');
+        console.log('📁 يمكنك إضافة المزيد من الملفات الآن');
+    </script>
+</body>
